@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
    public function index() {
-      return "Index";
+      return inertia("Index/Index");
    }
    public function show() {
       return "SHow";

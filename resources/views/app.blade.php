@@ -6,7 +6,7 @@
 
       <title>Etsy clone</title>
       @vite("resources/js/app.js")
-      @inertiaHhead
+      @inertiaHead
    </head>
    <body>
       @inertia
