@@ -16,7 +16,10 @@ return new class extends Migration
          $table->timestamps();
          $table->string("name");
          $table->text("description")->nullable();
-         $table->foreignId("user_id")->references("id")->on("users");
+         $table->foreignIdFor(
+            \App\Models\User::class,
+            "user_id"
+         )->constrained("users");
       });
    }
 
