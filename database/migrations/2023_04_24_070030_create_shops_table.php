@@ -15,6 +15,7 @@ return new class extends Migration
          $table->id();
          $table->timestamps();
          $table->string("name");
+         $table->string("profile_url")->nullable();
          $table->text("description")->nullable();
          $table->foreignIdFor(
             \App\Models\User::class,

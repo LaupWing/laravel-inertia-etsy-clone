@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class StoreFactory extends Factory
+class ShopFactory extends Factory
 {
    /**
     * Define the model's default state.
@@ -23,7 +23,7 @@ class StoreFactory extends Factory
          },
          "name" => fake()->company(),
          "description" => fake()->paragraph(),
-         "image" => fake()->imageUrl()
+         "profile_url" => fake()->imageUrl()
       ];
    }
 }
