@@ -5,6 +5,8 @@
             <ul>
                <li>
                   <Link href="/">index</Link>
+               </li>
+               <li>
                   <Link href="/show">Show</Link>
                </li>
             </ul>
