@@ -11,6 +11,6 @@ class IndexController extends Controller
       return inertia("Index/Index");
    }
    public function show() {
-      return "SHow";
+      return inertia("Index/Show");
    }
 }
