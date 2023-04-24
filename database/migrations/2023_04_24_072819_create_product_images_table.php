@@ -6,22 +6,27 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('product_images', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+   /**
+    * Run the migrations.
+    */
+   public function up(): void
+   {
+      Schema::create("product_images", function (Blueprint $table) {
+         $table->id();
+         $table->timestamps();
+         $table->string("url");
+         $table->foreignIdFor(
+            \App\Models\User::class,
+            "product_id"
+         )->constrained("products");
+      });
+   }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('product_images');
-    }
+   /**
+    * Reverse the migrations.
+    */
+   public function down(): void
+   {
+      Schema::dropIfExists("product_images");
+   }
 };
