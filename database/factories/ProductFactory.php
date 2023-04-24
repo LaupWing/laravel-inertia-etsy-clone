@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Shop;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class ProductFactory extends Factory
    public function definition(): array
    {
       return [
-         
+         "name" => fake()->name(),
+         "description" => fake()->paragraph(),
+         "price" => fake()->randomFloat(2, 10, 100),
+         "shop_id" => function () {
+            return Shop::inRandomOrder()->first()->id;
+         }
       ];
    }
 }
