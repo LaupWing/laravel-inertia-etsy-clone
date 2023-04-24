@@ -16,7 +16,7 @@ return new class extends Migration
          $table->timestamps();
          $table->string("url");
          $table->foreignIdFor(
-            \App\Models\User::class,
+            \App\Models\Product::class,
             "product_id"
          )->constrained("products");
       });

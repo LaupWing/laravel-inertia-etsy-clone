@@ -15,7 +15,18 @@ class Shop extends Model
       "user_id"
    ];
 
-   public function user(){
+   public function user()
+   {
       return $this->belongsTo(User::class);
+   }
+
+   public function products()
+   {
+      return $this->hasMany(Product::class);
+   }
+
+   public function orders()
+   {
+      return $this->hasMany(Order::class);
    }
 }
