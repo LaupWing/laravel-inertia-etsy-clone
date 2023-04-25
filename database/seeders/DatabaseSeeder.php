@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Shop::factory(10)->create();
         \App\Models\Product::factory(20)->create();
         $productImages = \App\Models\ProductImage::factory(50)->make();
-        foreach ($productImages as $key => $productImage) {
+        foreach ($productImages as $productImage) {
             $product = $productImage->product;
             $lastOrder = $product->images()->max("order") ?? 0;
             $order = $lastOrder + 1;
