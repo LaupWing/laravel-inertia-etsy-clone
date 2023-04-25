@@ -1,8 +1,11 @@
 <template>
    <div>
-      <form action="">
+      <form @submit.prevent="handleSubmit">
          <div>
-            <input type="file">
+            <input 
+               type="file"
+               @input="formData.profile_image = $event.target.files[0]"
+            >
          </div>
          <div>
             <label for="name">Name</label>
@@ -35,5 +38,9 @@ const formData = useForm({
    profile_image: null,
    description: ""
 })
+
+const handleSubmit = () => {
+   console.log(formData.profile_image)
+}
 
 </script>
