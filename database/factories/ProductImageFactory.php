@@ -20,6 +20,8 @@ class ProductImageFactory extends Factory
    {
       $product = Product::inRandomOrder()->first();
       $lastOrder = $product->images()->max("order") ?? 0;
+      $productImages = $product->images()->get()->toArray();
+      print_r($productImages);
       $order = $lastOrder + 1;
 
       return [
