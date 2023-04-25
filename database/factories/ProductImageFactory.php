@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,7 +20,7 @@ class ProductImageFactory extends Factory
       return [
          "url" => fake()->imageUrl(),
          "product_id" => function() {
-            
+            return Product::inRandomOrder()->first()->id;
          }
       ];
    }
