@@ -15,4 +15,20 @@ class Product extends Model
       "price",
       "shop_id"
    ];
+
+   public function shop() {
+      return $this->belongsTo(Shop::class);
+   }
+
+   public function images() {
+      return $this->hasMany(ProductImage::class);
+   }
+
+   public function thumbnail() {
+      return $this->hasOne(ProductImage::class)->where("is_thumbnail", true);
+   }
+
+   public function orders() {
+      return $this->belongsToMany(Order::class);
+   }
 }
