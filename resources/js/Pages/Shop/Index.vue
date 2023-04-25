@@ -1,6 +1,14 @@
 <template>
    <div>
-
+      <div
+         v-for="shop in shops"
+         :key="shop.id"
+      >
+         <img 
+            :src="shop.profile_url" 
+            alt=""
+         >
+      </div>
    </div>
 </template>
 
