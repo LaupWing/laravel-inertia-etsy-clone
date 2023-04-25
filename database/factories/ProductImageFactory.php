@@ -18,14 +18,13 @@ class ProductImageFactory extends Factory
     */
    public function definition(): array
    {
-      $lastOrder = ProductImage::max("order") ?? 0;
+      $product = Product::inRandomOrder()->first();
+      $lastOrder = $product->images()->max("order") ?? 0;
       $order = $lastOrder + 1;
 
       return [
          "url" => fake()->imageUrl(),
-         "product_id" => function() {
-            return Product::inRandomOrder()->first()->id;
-         },
+         "product_id" => $product->id,
          "order" => $order
       ];
    }
