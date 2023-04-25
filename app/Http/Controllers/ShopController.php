@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Shop;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -12,7 +13,9 @@ class ShopController extends Controller
     */
    public function index()
    {
-      return inertia("Shop/Index");
+      return inertia("Shop/Index", [
+         "shops" => Shop::all()
+      ]);
    }
 
    /**
