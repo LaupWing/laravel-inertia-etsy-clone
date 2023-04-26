@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Shop;
 use Illuminate\Http\Request;
+use PDO;
 
 class ShopController extends Controller
 {
@@ -35,6 +36,9 @@ class ShopController extends Controller
          "name" => "required",
          "description" => "required"
       ]));
+      if($request->hasFile("profile_image")){
+         dd("Got it");
+      }
       dd($request->all());
    }
 
