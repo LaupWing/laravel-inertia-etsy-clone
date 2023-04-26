@@ -37,7 +37,8 @@ class ShopController extends Controller
          "description" => "required"
       ]));
       if($request->hasFile("profile_image")){
-         dd("Got it");
+         $path = $request->file("profile_image")->store("images", "public");
+         dd($path);
       }
       dd($request->all());
    }
