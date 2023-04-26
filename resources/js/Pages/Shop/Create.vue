@@ -40,6 +40,7 @@ const formData = useForm({
 })
 
 const handleSubmit = () => {
+   formData.post("/shop")
    console.log(formData.profile_image)
 }
 
