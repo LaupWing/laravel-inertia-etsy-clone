@@ -31,6 +31,10 @@ class ShopController extends Controller
     */
    public function store(Request $request)
    {
+      $store = Shop::make($request->validate([
+         "name" => "required",
+         "description" => "required"
+      ]));
       dd($request->all());
    }
 
