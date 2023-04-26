@@ -32,15 +32,15 @@ class ShopController extends Controller
     */
    public function store(Request $request)
    {
-      $store = Shop::make($request->validate([
+      $shop = Shop::make($request->validate([
          "name" => "required",
          "description" => "required"
       ]));
       if($request->hasFile("profile_image")){
          $path = $request->file("profile_image")->store("images", "public");
-         dd($path);
+         $shop->profile_image = $path;
       }
-      dd($request->all());
+      $shop->save();
    }
 
    /**
