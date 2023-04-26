@@ -17,10 +17,10 @@ return new class extends Migration
          $table->string("name");
          $table->string("profile_url")->nullable();
          $table->text("description")->nullable();
-         $table->foreignIdFor(
-            \App\Models\User::class,
-            "user_id"
-         )->constrained("users");
+         // $table->foreignIdFor(
+         //    \App\Models\User::class,
+         //    "user_id"
+         // )->constrained("users");
       });
    }
 

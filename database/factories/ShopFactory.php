@@ -18,9 +18,9 @@ class ShopFactory extends Factory
    public function definition(): array
    {
       return [
-         "user_id" => function () {
-            return User::inRandomOrder()->first()->id;
-         },
+         // "user_id" => function () {
+         //    return User::inRandomOrder()->first()->id;
+         // },
          "name" => fake()->company(),
          "description" => fake()->paragraph(),
          "profile_url" => fake()->imageUrl()
