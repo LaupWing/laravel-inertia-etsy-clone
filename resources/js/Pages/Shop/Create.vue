@@ -14,6 +14,11 @@
                type="text" 
                id="name"
             >
+            <p
+               v-if="formData.errors.name"
+            >
+               Name is required
+            </p>
          </div>
          <div>
             <label for="description">Description</label>
@@ -24,6 +29,11 @@
                cols="30" 
                rows="10"
             ></textarea>
+            <p
+               v-if="formData.errors.description"
+            >
+               Name is required
+            </p>
          </div>
          <button>create</button>
       </form>
