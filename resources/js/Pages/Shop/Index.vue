@@ -1,7 +1,7 @@
 <template>
    <div>
       <div
-         v-if="page.props?.value?.flash?.success"
+         v-if="page.props?.flash.success"
       >
          Shop just has been created
       </div>
@@ -25,10 +25,10 @@ const props = defineProps({
    "shops": Object
 })
 const page = usePage<{
-   value: {
-      flash: {
-         success: string
-      }
+   flash: {
+      success: string
    }
 }>()
+
+console.log(page.props.flash)
 </script>

@@ -37,10 +37,10 @@ class ShopController extends Controller
          "description" => "required",
          // "user_id" => 1
       ]));
-      if($request->hasFile("profile_image_file")){
-         $path = $request->file("profile_image_file")->store("images", "public");
-         $shop->profile_url = $path;
-      }
+      // if($request->hasFile("profile_image_file")){
+      //    $path = $request->file("profile_image_file")->store("images", "public");
+      //    $shop->profile_url = $path;
+      // }
       $shop->save();
       
       return redirect()
