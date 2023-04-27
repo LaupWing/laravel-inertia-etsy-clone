@@ -43,7 +43,9 @@ class ShopController extends Controller
       }
       $shop->save();
       
-      return redirect()->route("shop.index");
+      return redirect()
+         ->route("shop.index")
+         ->with("success", "Listing was created!");
    }
 
    /**
