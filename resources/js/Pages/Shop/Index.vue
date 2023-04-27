@@ -17,7 +17,10 @@
                alt=""
             >
          </Link>
-         <Link :href="`/shop/${shop.id}`">
+         <Link 
+            :href="`/shop/${shop.id}`"
+            method="delete"
+         >
             <button>Delete</button>
          </Link>
       </div>
