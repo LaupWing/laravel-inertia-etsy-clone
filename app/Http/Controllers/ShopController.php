@@ -69,7 +69,20 @@ class ShopController extends Controller
     */
    public function update(Request $request, string $id)
    {
-      //
+      $shop = Shop::make($request->validate([
+         "name" => "required",
+         "description" => "required",
+         // "user_id" => 1
+      ]));
+      // if($request->hasFile("profile_image_file")){
+      //    $path = $request->file("profile_image_file")->store("images", "public");
+      //    $shop->profile_url = $path;
+      // }
+      $shop->save();
+      
+      return redirect()
+         ->route("shop.index")
+         ->with("success", "Listing was updated!");
    }
 
    /**
