@@ -19,8 +19,7 @@
 
 <script setup lang="ts">
 import { usePage } from "@inertiajs/vue3"
-import { computed } from "vue";
-
+import { computed } from "vue"
 
 defineProps({
    "shops": Object
@@ -33,5 +32,4 @@ const page = usePage<{
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
-
 </script>
