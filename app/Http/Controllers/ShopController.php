@@ -96,5 +96,7 @@ class ShopController extends Controller
    public function destroy(Shop $shop)
    {
       $shop->delete();
+
+      return redirect()->back()->with("success", "Shop was deleted!");
    }
 }

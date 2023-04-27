@@ -17,6 +17,9 @@
                alt=""
             >
          </Link>
+         <Link :href="`/shop/${shop.id}`">
+            <button>Delete</button>
+         </Link>
       </div>
    </div>
 </template>
@@ -25,7 +28,7 @@
 import { Link, usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
 
-const props = defineProps({
+defineProps({
    "shops": Object
 })
 const page = usePage<{
@@ -33,8 +36,6 @@ const page = usePage<{
       success: string
    }
 }>()
-
-console.log(props)
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
