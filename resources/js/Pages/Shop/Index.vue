@@ -9,19 +9,23 @@
          v-for="shop in shops"
          :key="shop.id"
       >
-         <img 
-            :src="shop.profile_url" 
-            alt=""
+         <Link
+            :href="`/shop/${shop.id}/edit`"
          >
+            <img 
+               :src="shop.profile_url" 
+               alt=""
+            >
+         </Link>
       </div>
    </div>
 </template>
 
 <script setup lang="ts">
-import { usePage } from "@inertiajs/vue3"
+import { Link, usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
 
-defineProps({
+const props = defineProps({
    "shops": Object
 })
 const page = usePage<{
@@ -29,6 +33,8 @@ const page = usePage<{
       success: string
    }
 }>()
+
+console.log(props)
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
