@@ -18,10 +18,10 @@ return new class extends Migration
             \App\Models\User::class,
             "user_id"
          )->constrained("users");
-         $table->foreignIdFor(
-            \App\Models\Shop::class,
-            "shop_id"
-         )->constrained("shops");
+         // $table->foreignIdFor(
+         //    \App\Models\Shop::class,
+         //    "shop_id"
+         // )->constrained("shops");
       });
    }
 
