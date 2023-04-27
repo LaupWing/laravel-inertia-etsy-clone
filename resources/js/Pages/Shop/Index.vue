@@ -10,7 +10,7 @@
          :key="shop.id"
       >
          <Link
-            :href="`/shop/${shop.id}/edit`"
+            :href="route('/shop')"
          >
             <img 
                :src="shop.profile_url" 
