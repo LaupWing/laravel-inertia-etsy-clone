@@ -20,8 +20,9 @@
          <Link 
             :href="`/shop/${shop.id}`"
             method="delete"
+            as="button"
          >
-            <button>Delete</button>
+            Delete
          </Link>
       </div>
    </div>
