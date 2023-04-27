@@ -1,7 +1,7 @@
 <template>
    <div>
       <div
-         v-if="page.props?.flash.success"
+         v-if="flashSuccess"
       >
          Shop just has been created
       </div>
@@ -19,9 +19,10 @@
 
 <script setup lang="ts">
 import { usePage } from "@inertiajs/vue3"
+import { computed } from "vue";
 
 
-const props = defineProps({
+defineProps({
    "shops": Object
 })
 const page = usePage<{
@@ -29,6 +30,8 @@ const page = usePage<{
       success: string
    }
 }>()
+const flashSuccess = computed(() => {
+   return page.props?.flash.success
+})
 
-console.log(page.props.flash)
 </script>
