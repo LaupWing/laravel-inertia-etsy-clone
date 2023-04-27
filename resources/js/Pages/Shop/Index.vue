@@ -1,7 +1,7 @@
 <template>
    <div>
       <div
-         v-if="page.props?.value.flash.success"
+         v-if="page.props?.value?.flash?.success"
       >
          Shop just has been created
       </div>
