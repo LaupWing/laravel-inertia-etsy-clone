@@ -4,7 +4,7 @@
          <div>
             <input 
                type="file"
-               @input="formData.profile_image_file = $event.target.files[0]"
+               @input="handleFileInput"
             >
          </div>
          <div>
@@ -43,7 +43,11 @@
 <script setup lang="ts">
 import { useForm } from "@inertiajs/vue3"
 
-const formData = useForm({
+const formData = useForm<{
+   name: string
+   profile_image_file: null | File
+   description: string
+}>({
    name: "",
    profile_image_file: null,
    description: ""
@@ -53,5 +57,13 @@ const handleSubmit = () => {
    formData.post("/shop")
    console.log(formData.profile_image_file)
 }
+
+const handleFileInput = (event: Event) => {
+   const input = event.target as HTMLInputElement
+   if(input.files?.length){
+      return
+   }
+   formData.profile_image_file = input!.files![0]!
+} 
 
 </script>
