@@ -14,3 +14,6 @@ Every product is connected to a shop. So a product has to be connected to a shop
 
 ### Orders 
 Everytime a user checks out it will create a order item in the database. Which contains the products of the user. The order item is connected to the user and the shop. 
+
+### Todos
+*  Add darkmode
