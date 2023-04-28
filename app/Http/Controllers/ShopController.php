@@ -18,6 +18,9 @@ class ShopController extends Controller
          unset($shop->ratings_avg_rating);
          return $shop;
       });
+      // $top_shops = $shops->sortByDesc(function ($shop) {
+      //    // return $shop
+      // })
       return inertia("Shop/Index", [
          "shops" => $shops
       ]);
