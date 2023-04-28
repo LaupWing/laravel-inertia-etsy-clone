@@ -13,9 +13,9 @@ class ShopController extends Controller
     */
    public function index()
    {
-      $shops = Shop::with("ratings")->get()->map(function($shop){
-         $shop["average_rating"] = round($shop->ratings->avg("rating"));
-         unset($shop->ratings);
+      $shops = Shop::withAvg("ratings", "rating")->get()->map(function ($shop) {
+         $shop->average_rating = round($shop->ratings_avg_rating);
+         unset($shop->ratings_avg_rating);
          return $shop;
       });
       return inertia("Shop/Index", [
