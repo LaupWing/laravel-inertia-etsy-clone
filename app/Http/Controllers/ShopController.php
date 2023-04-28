@@ -13,8 +13,9 @@ class ShopController extends Controller
     */
    public function index()
    {
+      $shops = Shop::with("ratings")->get();
       return inertia("Shop/Index", [
-         "shops" => Shop::all()
+         "shops" => $shops
       ]);
    }
 

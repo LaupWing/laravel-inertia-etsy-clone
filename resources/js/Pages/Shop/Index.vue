@@ -32,11 +32,13 @@
 import { Link, usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
 
-defineProps({
+const props = defineProps({
    "shops": Object
 })
 const page = usePage()
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
+
+console.log(props.shops)
 </script>
