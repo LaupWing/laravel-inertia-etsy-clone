@@ -35,11 +35,7 @@ import { computed } from "vue"
 defineProps({
    "shops": Object
 })
-const page = usePage<{
-   flash: {
-      success: string
-   }
-}>()
+const page = usePage()
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })

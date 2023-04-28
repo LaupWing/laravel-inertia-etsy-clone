@@ -4,7 +4,7 @@
          <div>
             <input 
                type="file"
-               @input="formData.profile_image_file = $event.target.files[0]"
+               @input="handleFileInput"
             >
          </div>
          <div>
@@ -61,5 +61,13 @@ const handleSubmit = () => {
    formData.put(`/shop/${props.shop.id}`)
    console.log(formData.profile_image_file)
 }
+
+const handleFileInput = (event: Event) => {
+   const input = event.target as HTMLInputElement
+   if(input.files?.length){
+      return
+   }
+   formData.profile_image_file = input!.files![0]!
+} 
 
 </script>

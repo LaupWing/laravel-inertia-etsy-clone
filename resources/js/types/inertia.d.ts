@@ -19,6 +19,7 @@ declare global {
    
       export type Flash = {
          message: undefined | string
+         success: undefined | string
          error: undefined | string[]
       } 
    }
