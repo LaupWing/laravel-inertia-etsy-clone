@@ -86,7 +86,7 @@ class ShopController extends Controller
       
       return redirect()
          ->route("shop.index")
-         ->with("success", "Listing was updated!");
+         ->with("success", "Shop was updated!");
    }
 
    /**
