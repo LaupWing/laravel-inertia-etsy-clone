@@ -51,7 +51,11 @@ const props = defineProps<{
    }
 }>()
 
-const formData = useForm({
+const formData = useForm<{
+   name: string
+   profile_image_file: null | File
+   description: string
+}>({
    name: props.shop.name,
    profile_image_file: null,
    description: props.shop.description
