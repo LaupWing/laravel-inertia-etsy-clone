@@ -7,42 +7,26 @@
       </div>
       <h2 class="mx-auto text-4xl my-6">Shops Page</h2>
       <main class="grid grid-cols-2 max-w-5xl w-full gap-4 mx-auto">
-         <section
+         <ShopCard
             v-for="shop in shops"
             :key="shop.id"
-            class="flex overflow-hidden grid-cols-1 border-[1.5px] shadow rounded-md"
-         >
-            <img 
-               :src="shop.profile_url" 
-               :alt="shop.name"
-               class="w-32 aspect-square object-cover"
-            >
-            <div class="flex flex-col p-4">
-               <h2>{{ shop.name }}</h2>
-               
-               <StarRating :star-size="20" read-only :rating="rating"/>
-               
-            </div>
-         </section>
+            :shop="shop"
+         />
       </main>
    </div>
 </template>
 
 <script setup lang="ts">
-import { Link, usePage } from "@inertiajs/vue3"
-import { ref } from "vue"
+import { Shop } from "@/types/types"
+import { usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
-// @ts-ignore
-import StarRating from "vue-star-rating"
+import ShopCard from "./Components/ShopCard.vue"
 
-const props = defineProps({
-   "shops": Object
-})
+defineProps<{
+   shops: Shop[]
+}>()
 const page = usePage()
 const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
-
-const rating = ref(3.2)
-console.log(props.shops)
 </script>

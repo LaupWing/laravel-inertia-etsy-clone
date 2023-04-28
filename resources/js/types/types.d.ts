@@ -4,10 +4,12 @@ interface Base {
 }
 
 export interface Shop extends Base {
+   name: string
    description: string
    id: number
    profile_url: string
    ratings: Rating[]
+   average_rating: number
 }
 
 export interface Rating extends Base {
