@@ -62,7 +62,7 @@ const formData = useForm<{
 })
 
 const handleSubmit = () => {
-   formData.put(`/shop/${props.shop.id}`)
+   formData.put(route("shop.update", {shop: props.shop.id}))
    console.log(formData.profile_image_file)
 }
 

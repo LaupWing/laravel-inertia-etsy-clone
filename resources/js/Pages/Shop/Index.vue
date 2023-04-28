@@ -18,7 +18,7 @@
             >
          </Link>
          <Link 
-            :href="`shop/${shop.id}`"
+            :href="route('shop.destroy', {shop: shop.id})"
             method="delete"
             as="button"
          >

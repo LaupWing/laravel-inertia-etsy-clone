@@ -54,8 +54,7 @@ const formData = useForm<{
 })
 
 const handleSubmit = () => {
-   formData.post("/shop")
-   console.log(formData.profile_image_file)
+   formData.post(route("shop.store"))
 }
 
 const handleFileInput = (event: Event) => {
