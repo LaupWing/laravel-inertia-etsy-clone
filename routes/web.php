@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [IndexController::class, "index"]);
 Route::get("/show", [IndexController::class, "show"]);
 
-Route::resource("shop", ShopController::class);
+Route::resource("shop", ShopController::class)->name("GET", "shop");
