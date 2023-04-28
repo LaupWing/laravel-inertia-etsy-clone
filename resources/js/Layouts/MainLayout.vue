@@ -21,9 +21,11 @@
          </div>
       </header>
       <slot />
+      <Footer/>
    </div>
 </template>
 
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3"
+import Footer from "./Footer.vue"
 </script>
