@@ -9,14 +9,14 @@
          v-for="shop in shops"
          :key="shop.id"
       >
-         <!-- <Link
-            :href="route('/shop', {shop: shop.id})"
+         <Link
+            :href="route('shop.edit', {shop: shop.id})"
          >
             <img 
                :src="shop.profile_url" 
                alt=""
             >
-         </Link> -->
+         </Link>
          <Link 
             :href="`shop/${shop.id}`"
             method="delete"
