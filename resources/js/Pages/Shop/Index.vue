@@ -19,7 +19,9 @@
             >
             <div class="flex flex-col p-4">
                <h2>{{ shop.name }}</h2>
-               <StarRating read-only :rating="rating"/>
+               
+               <StarRating :star-size="20" read-only :rating="rating"/>
+               
             </div>
          </section>
       </main>
@@ -41,6 +43,6 @@ const flashSuccess = computed(() => {
    return page.props?.flash.success
 })
 
-const rating = ref(4)
+const rating = ref(3.2)
 console.log(props.shops)
 </script>
