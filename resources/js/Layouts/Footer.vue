@@ -1,5 +1,5 @@
 <template>
-   <footer class="bg-gray-100 py-8">
+   <footer class="border-t-2 py-8">
       <div class="container mx-auto px-4">
          <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/3 px-4">
@@ -52,5 +52,3 @@
 <script setup lang="ts">
 
 </script>
-
-<style scoped></style>

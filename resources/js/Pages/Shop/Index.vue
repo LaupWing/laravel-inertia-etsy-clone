@@ -1,11 +1,11 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col py-6">
       <div
          v-if="flashSuccess"
       >
          Shop just has been created
       </div>
-      <h2 class="mx-auto text-4xl my-6">Shops Page</h2>
+      <h2 class="mx-auto text-4xl mb-6">Shops Page</h2>
       <main class="grid grid-cols-2 max-w-5xl w-full gap-4 mx-auto">
          <ShopCard
             v-for="shop in shops"
