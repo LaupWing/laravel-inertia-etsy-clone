@@ -37,5 +37,4 @@ import Heart from "../../../Global/Icons/Heart.vue"
 defineProps<{
    shop: Shop
 }>()
-
 </script>
