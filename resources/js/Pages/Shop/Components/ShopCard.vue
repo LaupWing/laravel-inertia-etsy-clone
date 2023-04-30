@@ -19,7 +19,6 @@
          <div class="mt-auto">
             {{ shop.products_count }} items
          </div>
-         <HeartIcon size="20" />
       </div>
    </section>
 </template>
@@ -28,12 +27,9 @@
 import { Shop } from "@/types/types"
 // @ts-ignore
 import StarRating from "vue-star-rating"
-// @ts-ignore
-import { HeartIcon } from "@vue-hero-icons/outline"
 
-const props = defineProps<{
+defineProps<{
    shop: Shop
 }>()
 
-console.log(props)
 </script>
