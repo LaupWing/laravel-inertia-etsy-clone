@@ -10,6 +10,8 @@ export interface Shop extends Base {
    profile_url: string
    ratings: Rating[]
    average_rating: number
+   ratings_count: number
+   products_count: number
 }
 
 export interface Rating extends Base {

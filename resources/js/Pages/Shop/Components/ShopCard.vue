@@ -22,8 +22,9 @@ import { Shop } from "@/types/types"
 // @ts-ignore
 import StarRating from "vue-star-rating"
 
-defineProps<{
+const props = defineProps<{
    shop: Shop
 }>()
 
+console.log(props)
 </script>
