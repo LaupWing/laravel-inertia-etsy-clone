@@ -16,7 +16,9 @@
             />
             <p class="mt-1 ml-1">({{ shop.ratings_count }})</p>
          </div>
-         
+         <div class="mt-auto">
+            {{ shop.products_count }} items
+         </div>
       </div>
    </section>
 </template>
