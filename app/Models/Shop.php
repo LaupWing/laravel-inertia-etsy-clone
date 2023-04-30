@@ -33,6 +33,6 @@ class Shop extends Model
 
    public function ratings()
    {
-      return $this->hasMany(Rating::class);
+      return $this->hasMany(ShopRating::class);
    }
 }
