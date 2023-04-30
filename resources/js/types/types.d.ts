@@ -20,3 +20,11 @@ export interface Rating extends Base {
    user_id: number
    rating: number
 }
+
+export interface Product extends Base {
+   id: number
+   name: string
+   price: number
+   shop_id: number
+   description: string
+}
