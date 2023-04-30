@@ -22,9 +22,12 @@ import { usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
 import ShopCard from "./Components/ShopCard.vue"
 
-defineProps<{
-   shops: Shop[]
+const props = defineProps<{
+   shops: Shop[],
+   top_shops: Shop[]
 }>()
+
+console.log(props)
 const page = usePage()
 const flashSuccess = computed(() => {
    return page.props?.flash.success
