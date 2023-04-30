@@ -22,9 +22,10 @@ class ShopController extends Controller
             unset($shop->ratings_avg_rating);
             return $shop;
          });
-      $top_shops = Shop::withCount("ratings")->with("products")->orderByDesc("ratings_count")->take(8)->get();
-      dd($top_shops);
-      // dd($shops);
+      $top_shops = Shop::withCount("ratings")->with(["products" => function ($query) {
+         $query->orderBy("name", "asc")->with("images");
+      }])->orderByDesc("ratings_count")->take(8)->get();
+      
       return inertia("Shop/Index", [
          "shops" => $shops,
          "top_shops" => $top_shops
