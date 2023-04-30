@@ -22,8 +22,8 @@ class ShopController extends Controller
             unset($shop->ratings_avg_rating);
             return $shop;
          });
-      $top_shops = Shop::withCount("ratings")->orderByDesc("ratings_count")->take(8)->get();
-
+      $top_shops = Shop::withCount("ratings")->with("products")->orderByDesc("ratings_count")->take(8)->get();
+      dd($top_shops);
       // dd($shops);
       return inertia("Shop/Index", [
          "shops" => $shops,
