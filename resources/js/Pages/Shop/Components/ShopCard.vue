@@ -7,11 +7,15 @@
       >
       <div class="flex flex-col p-4">
          <h2>{{ shop.name }}</h2>
-         <StarRating 
-            :star-size="20" 
-            read-only 
-            :rating="shop.average_rating"
-         />
+         <div class="flex items-center">
+            <StarRating 
+               :star-size="20" 
+               read-only 
+               :rating="shop.average_rating"
+               :show-rating="false"
+            />
+            <p class="mt-1 ml-1">({{ shop.ratings_count }})</p>
+         </div>
          
       </div>
    </section>
