@@ -11,7 +11,7 @@ return new class extends Migration
     */
    public function up(): void
    {
-      Schema::create('ratings', function (Blueprint $table) {
+      Schema::create('shop_ratings', function (Blueprint $table) {
          $table->id();
          $table->timestamps();
          $table->unsignedTinyInteger("rating")->checkIn([1, 2, 3, 4, 5]);
