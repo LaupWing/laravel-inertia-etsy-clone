@@ -17,10 +17,10 @@ return new class extends Migration
          $table->text("description")->nullable();
          $table->integer("price");
          $table->timestamps();
-         // $table->foreignIdFor(
-         //    \App\Models\Shop::class,
-         //    "shop_id"
-         // )->constrained("shops");
+         $table->foreignIdFor(
+            \App\Models\Shop::class,
+            "shop_id"
+         )->constrained("shops");
       });
    }
 
