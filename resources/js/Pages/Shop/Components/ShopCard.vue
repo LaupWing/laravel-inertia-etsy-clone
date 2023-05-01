@@ -29,12 +29,12 @@
 </template>
 
 <script setup lang="ts">
-import { Shop } from "@/types/types"
+import type { ShopType } from "@/types/types"
 // @ts-ignore
 import StarRating from "vue-star-rating"
 import Heart from "../../../Global/Icons/Heart.vue"
 
 defineProps<{
-   shop: Shop
+   shop: ShopType
 }>()
 </script>
