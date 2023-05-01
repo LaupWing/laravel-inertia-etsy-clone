@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
    public function create()
    {
-      
+      return inertia("Auth/Login");  
    }
 
    public function store()
@@ -19,6 +19,6 @@ class AuthController extends Controller
 
    public function destroy()
    {
-      
+
    }
 }
