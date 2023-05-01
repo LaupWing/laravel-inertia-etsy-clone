@@ -7,12 +7,12 @@
             class="overflow-hidden"
             v-for="(product, index) in shop.products"
             :class="shopProductsGridClasses(shop.products?.length!, index)"
+            :key="product.id"
          >
             <img 
                :src="product.images && product.images?.length! > 0 
                   ? product.images[0].url 
                   : 'https://cms-cdn.placeholder.co/Home_page1_76f0b1d7ab.png?width=1920'" 
-               :key="product.id"
                class="w-full h-full object-cover"
                alt="First product image"
             >
