@@ -11,6 +11,7 @@ export interface ShopType extends BaseType {
    ratings: RatingType[]
    average_rating: number
    ratings_count: number
+   products?: ProductType[]
    products_count: number
 }
 
