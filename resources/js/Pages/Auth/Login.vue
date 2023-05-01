@@ -1,5 +1,5 @@
 <template>
-   <form>
+   <form @submit.prevent="login">
       <div class="w-1/2 mx-auto">
          <div>
             <label for="email">Email (username)</label>
@@ -7,6 +7,7 @@
                type="email" 
                name="email" 
                id="email"
+               v-model="formData.email"
             >
             <div>
                <!-- Here comes the errors -->
@@ -17,6 +18,7 @@
             <input 
                type="password" 
                name="password" 
+               v-model="formData.password"
                id="password"
             >
             <div>
@@ -31,5 +33,14 @@
 </template>
 
 <script setup lang="ts">
+import { useForm } from "@inertiajs/vue3"
 
+const formData = useForm({
+   email: null,
+   password: null
+})
+
+const login = () => {
+   
+}
 </script>
