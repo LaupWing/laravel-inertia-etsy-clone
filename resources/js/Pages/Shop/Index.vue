@@ -22,14 +22,14 @@
 </template>
 
 <script setup lang="ts">
-import { Shop } from "@/types/types"
+import type { ShopType } from "@/types/types"
 import { usePage } from "@inertiajs/vue3"
 import { computed } from "vue"
 import ShopCard from "./Components/ShopCard.vue"
 
 const props = defineProps<{
-   shops: Shop[],
-   top_shops: Shop[]
+   shops: ShopType[],
+   top_shops: ShopType[]
 }>()
 
 console.log(props)
