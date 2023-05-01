@@ -3,7 +3,15 @@ import { createInertiaApp } from "@inertiajs/vue3"
 import MainLayout from "./Layouts/MainLayout.vue"
 import "../css/app.css"
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m"
+import { InertiaProgress } from "@inertiajs/progress"
  
+InertiaProgress.init({
+   delay: 0,
+   color: "#29d",
+   includeCSS: true,
+   showSpinner: true
+})
+
 createInertiaApp({
    resolve: (name) => {
       const pages = import.meta.glob<DefineComponent>("./Pages/**/*.vue", { eager: true })
