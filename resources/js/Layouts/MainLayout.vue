@@ -16,13 +16,21 @@
                   <li>Login</li>
                </ul>
             </div>
-            <nav>
-               <ul class="flex gap-2">
+            <nav class="mt-3">
+               <ul class="flex gap-2 uppercase font-bold text-sm text-gray-500">
                   <li>
-                     <Link href="/">index</Link>
+                     <Link 
+                        href="/"
+                     >
+                        Home
+                     </Link>
                   </li>
                   <li>
-                     <Link href="/show">Show</Link>
+                     <Link 
+                        :href="route('shop.index')"
+                     >
+                        Stores
+                     </Link>
                   </li>
                </ul>
             </nav>
