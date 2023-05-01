@@ -18,6 +18,12 @@
             >
          </div>
       </div>
+      <div class="flex items-center mt-auto">
+         <img 
+            class="w-10 h-10 rounded-full"
+            :src="shop.profile_url"
+         />
+      </div>
    </div>
 </template>
 
