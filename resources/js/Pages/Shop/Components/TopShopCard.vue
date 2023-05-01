@@ -4,8 +4,9 @@
    >
       <div class="h-[80%] grid grid-cols-2 grid-rows-2 gap-1 overflow-hidden">
          <div 
-            class="col-span-1 overflow-hidden"
-            v-for="product in shop.products"
+            class="overflow-hidden"
+            v-for="(product, index) in shop.products"
+            :class="shopProductsGridClasses(shop.products?.length!, index)"
          >
             <img 
                :src="product.images && product.images?.length! > 0 
