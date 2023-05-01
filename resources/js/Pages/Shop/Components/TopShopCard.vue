@@ -1,6 +1,5 @@
 <template>
    <div
-      
       class="aspect-square border-2 flex flex-col p-2 border-gray-200 rounded"
    >
       <div class="h-[80%] grid grid-cols-2 grid-rows-2 gap-1 overflow-hidden">
@@ -30,9 +29,20 @@
 <script setup lang="ts">
 import { ShopType } from "@/types/types"
 
-const prop = defineProps<{
+defineProps<{
    shop: ShopType
 }>()
 
-console.log
+const shopProductsGridClasses = (shopProductsLength:number, index:number) => {
+   switch(shopProductsLength){
+      case 1:
+         return "col-span-2 row-span-2"
+      case 2:
+         return "col-span-2 row-span-1"
+      case 3:
+         return index === 2 ? "col-span-2 row-span-1" : "col-span-1 row-span-1"
+      default:
+         return "col-span-1 row-span-1"
+   }
+}
 </script>
