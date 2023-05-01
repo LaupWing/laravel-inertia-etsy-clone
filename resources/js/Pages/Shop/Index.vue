@@ -1,18 +1,23 @@
 <template>
-   <div class="flex flex-col py-6">
+   <div class="flex flex-col py-10">
       <div
          v-if="flashSuccess"
       >
          Shop just has been created
       </div>
-      <h2 class="mx-auto text-4xl mb-6">Shops Page</h2>
-      <main class="grid grid-cols-2 max-w-5xl w-full gap-4 mx-auto">
-         <ShopCard
-            v-for="shop in shops"
-            :key="shop.id"
-            :shop="shop"
-         />
-      </main>
+      <div class="flex flex-col gap-6">
+         <h2 class="mx-auto text-4xl">Shops Page</h2>
+         <main class="flex flex-col gap-4 max-w-5xl w-full mx-auto">
+            <h2 class="col-span-full text-2xl">All Shops</h2>
+            <div class="grid grid-cols-2 gap-4">
+               <ShopCard
+                  v-for="shop in shops"
+                  :key="shop.id"
+                  :shop="shop"
+               />
+            </div>
+         </main>
+      </div>
    </div>
 </template>
 
