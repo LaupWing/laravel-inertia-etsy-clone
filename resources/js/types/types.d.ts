@@ -27,8 +27,12 @@ export interface ProductType extends BaseType {
    price: number
    shop_id: number
    description: string
+   images?: ImageType[]
 }
 
-export interface Image extends BaseType {
-
+export interface ImageType extends BaseType {
+   id: number
+   url: string
+   product_id: number
+   order: number
 }
