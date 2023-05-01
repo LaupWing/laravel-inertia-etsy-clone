@@ -9,10 +9,12 @@
             v-for="product in shop.products"
          >
             <img 
-               src="https://cms-cdn.placeholder.co/Home_page1_76f0b1d7ab.png?width=1920" 
+               :src="product.images && product.images?.length! > 0 
+                  ? product.images[0].url 
+                  : 'https://cms-cdn.placeholder.co/Home_page1_76f0b1d7ab.png?width=1920'" 
                :key="product.id"
-               class="w-full object-cover"
-               alt=""
+               class="w-full h-full object-cover"
+               alt="First product image"
             >
          </div>
       </div>
@@ -26,5 +28,5 @@ const prop = defineProps<{
    shop: ShopType
 }>()
 
-console.log(prop)
+console.log
 </script>
