@@ -5,9 +5,22 @@
       >
          Shop just has been created
       </div>
+      
       <div class="flex flex-col gap-6">
          <h2 class="mx-auto text-4xl">Shops Page</h2>
-         <main class="flex flex-col gap-4 max-w-5xl w-full mx-auto">
+         <section class="flex flex-col gap-4 max-w-5xl w-full mx-auto">
+            <h2 class="col-span-full text-2xl">All Shops</h2>
+            <div class="grid grid-cols-4 gap-4">
+               <div
+                  v-for="shop in top_shops.splice(0, 4)"
+                  :key="shop.id"
+                  class="aspect-square border-2 border-gray-200 rounded"
+               >
+
+               </div>
+            </div>
+         </section>
+         <section class="flex flex-col gap-4 max-w-5xl w-full mx-auto">
             <h2 class="col-span-full text-2xl">All Shops</h2>
             <div class="grid grid-cols-2 gap-4">
                <ShopCard
@@ -16,7 +29,7 @@
                   :shop="shop"
                />
             </div>
-         </main>
+         </section>
       </div>
    </div>
 </template>
