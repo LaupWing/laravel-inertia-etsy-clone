@@ -39,12 +39,11 @@ import { computed } from "vue"
 import ShopCard from "./Components/ShopCard.vue"
 import TopShopCard from "./Components/TopShopCard.vue"
 
-const props = defineProps<{
+defineProps<{
    shops: ShopType[],
    top_shops: ShopType[]
 }>()
 
-console.log(props)
 const page = usePage()
 const flashSuccess = computed(() => {
    return page.props?.flash.success

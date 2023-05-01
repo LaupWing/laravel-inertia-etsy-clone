@@ -22,7 +22,9 @@
 <script setup lang="ts">
 import { ShopType } from "@/types/types"
 
-defineProps<{
+const prop = defineProps<{
    shop: ShopType
 }>()
+
+console.log(prop)
 </script>
