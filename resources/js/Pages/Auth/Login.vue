@@ -1,25 +1,33 @@
 <template>
-   <form @submit.prevent="login">
-      <div class="w-1/2 mx-auto">
-         <div>
-            <label for="email">Email (username)</label>
+   <div class="w-full max-w-sm mx-auto py-10">
+      <h2 class="text-4xl">Login</h2>
+      <form 
+         @submit.prevent="login"
+         class="py-4 flex flex-col gap-4"
+      >
+         <div class="w-full flex flex-col">
+            <label for="email">Email</label>
             <input 
                type="email" 
                name="email" 
                id="email"
+               class="rounded border-gray-400 shadow"
+               placeholder="Your email"
                v-model="formData.email"
             >
             <div>
                <!-- Here comes the errors -->
             </div>
          </div>
-         <div>
-            <label for="password">Password (username)</label>
+         <div class="w-full flex flex-col">
+            <label for="password">Password</label>
             <input 
                type="password" 
                name="password" 
                v-model="formData.password"
                id="password"
+               class="rounded border-gray-400 shadow"
+               placeholder="Your password"
             >
             <div>
                <!-- Here comes the errors -->
@@ -28,8 +36,8 @@
          <div>
             <button type="submit">Login</button>
          </div>
-      </div>
-   </form>
+      </form>
+   </div>
 </template>
 
 <script setup lang="ts">

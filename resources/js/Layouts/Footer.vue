@@ -1,6 +1,6 @@
 <template>
    <footer class="border-t-2 py-8">
-      <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
          <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/3 px-4">
                <h3 class="text-gray-900 font-bold text-lg mb-2">About Etsy</h3>
