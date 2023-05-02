@@ -15,22 +15,26 @@
                placeholder="Your email"
                v-model="formData.email"
             >
-            <div>
-               <!-- Here comes the errors -->
+            <div
+               v-if="formData.errors.email"
+            >
+               {{ formData.errors.email }}
             </div>
          </div>
          <div class="w-full flex flex-col">
             <label for="password">Password</label>
             <input 
-               type="password" 
+               type="password"
                name="password" 
                v-model="formData.password"
                id="password"
                class="rounded border-gray-400 shadow"
                placeholder="Your password"
             >
-            <div>
-               <!-- Here comes the errors -->
+            <div
+               v-if="formData.errors.password"
+            >
+               {{ formData.errors.password }}
             </div>
          </div>
          <button 
