@@ -11,7 +11,17 @@
                      placeholder="Search for..."
                   >
                </div>
-               <ul class="flex gap-4">
+               <ul 
+                  class="flex gap-4"
+                  v-if="user"
+               >
+                  <li>Sign in</li>
+                  <li>Logout</li>
+               </ul>
+               <ul 
+                  class="flex gap-4"
+                  v-else
+               >
                   <li>Sign in</li>
                   <li>Login</li>
                </ul>
