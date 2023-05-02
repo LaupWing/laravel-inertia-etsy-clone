@@ -44,4 +44,14 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3"
 import Footer from "./Footer.vue"
+import { computed } from "vue"
+import { usePage } from "@inertiajs/vue3"
+
+const page = usePage()
+
+const user = computed(() => {
+   return page.props?.user
+})
+
+console.log(user)
 </script>
