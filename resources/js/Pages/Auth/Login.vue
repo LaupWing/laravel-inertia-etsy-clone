@@ -33,8 +33,13 @@
                <!-- Here comes the errors -->
             </div>
          </div>
+         <button 
+            class="w-full bg-orange-400 rounded text-white font-bold uppercase py-1 mt-2" 
+            type="submit"
+         >
+            Login
+         </button>
          <div>
-            <button type="submit">Login</button>
          </div>
       </form>
    </div>
