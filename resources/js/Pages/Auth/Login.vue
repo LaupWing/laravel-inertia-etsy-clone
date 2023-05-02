@@ -54,6 +54,6 @@ const formData = useForm({
 })
 
 const login = () => {
-   
+   formData.post(route("login.store"))
 }
 </script>

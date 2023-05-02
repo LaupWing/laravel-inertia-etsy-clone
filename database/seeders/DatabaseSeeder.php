@@ -24,5 +24,10 @@ class DatabaseSeeder extends Seeder
          $productImage->order = $order;
          $productImage->save();
       }
+
+      \App\Models\User::factory()->create([
+         "name" => "Test User",
+         "email" => "test@example.com"
+      ]);
    }
 }
