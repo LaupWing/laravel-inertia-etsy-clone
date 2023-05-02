@@ -25,6 +25,8 @@ class AuthController extends Controller
          ]);
       }
       $request->session()->regenerate();
+
+      return redirect()->intended();
    }
 
    public function destroy()
